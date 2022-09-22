@@ -5,7 +5,7 @@ namespace AttributesWebApi.Attributes;
 [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter)]
 public sealed class RequiredNotEmptyOrWhiteSpaceAttribute : RequiredAttribute
 {
-    public override bool IsValid(object? value)
+    public override bool IsValid(object value)
     {
         if (value is string stringValue)
         {
